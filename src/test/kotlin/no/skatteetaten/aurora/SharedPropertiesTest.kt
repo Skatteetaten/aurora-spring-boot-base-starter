@@ -10,7 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest(classes = [SharedProperties::class])
 class SharedPropertiesTest {
-
     @Autowired
     private lateinit var sharedProperties: SharedProperties
 
@@ -22,5 +21,4 @@ class SharedPropertiesTest {
         assertThat(sharedProperties).isNotNull()
         assertThat(applicationName).isEqualTo("my-app")
     }
-
 }

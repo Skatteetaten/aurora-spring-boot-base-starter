@@ -12,12 +12,18 @@ import org.springframework.core.io.support.EncodedResource;
 
 @Configuration
 @Order(Ordered.HIGHEST_PRECEDENCE)
-@PropertySource(value = "classpath:aurora-openshift-spring-boot-starter.yml", factory = SharedProperties.YamlPropertyLoaderFactory.class)
+@PropertySource(
+        value = "classpath:aurora-openshift-spring-boot-starter.yml",
+        factory = SharedProperties.YamlPropertyLoaderFactory.class
+)
 public class SharedProperties {
+
     static class YamlPropertyLoaderFactory extends DefaultPropertySourceFactory {
         @Override
-        public org.springframework.core.env.PropertySource<?> createPropertySource(String name,
-            EncodedResource resource) throws IOException {
+        public org.springframework.core.env.PropertySource<?> createPropertySource(
+            String name,
+            EncodedResource resource
+        ) throws IOException {
             return new YamlPropertySourceLoader()
                 .load(resource.getResource().getFilename(), resource.getResource())
                 .get(0);
