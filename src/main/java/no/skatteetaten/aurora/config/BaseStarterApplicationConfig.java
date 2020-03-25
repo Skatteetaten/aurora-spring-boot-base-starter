@@ -11,16 +11,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.Import;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.PropertiesPropertySource;
+
+import no.skatteetaten.aurora.SharedProperties;
 
 /**
  * Class for doing basic application configuration and initialization. You can add to this class, but you should
  * probably not change very much (know why, at the very least).
  */
+@Import(SharedProperties.class)
 @Configuration
-@PropertySource("classpath:aurora-openshift-spring-boot-starter.properties")
 public class BaseStarterApplicationConfig {
 
     private static final Logger logger = LoggerFactory.getLogger(BaseStarterApplicationConfig.class);

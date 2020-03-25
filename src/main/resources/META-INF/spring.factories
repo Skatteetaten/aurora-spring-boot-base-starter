@@ -1,3 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   no.skatteetaten.aurora.config.BaseStarterApplicationConfig,\
-  no.skatteetaten.aurora.AuroraMetrics
+  no.skatteetaten.aurora.AuroraMetrics,\
+  no.skatteetaten.aurora.SharedProperties
