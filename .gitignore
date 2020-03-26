@@ -1,7 +1,5 @@
-.gradle
-/build/
-buildSrc/build
 .idea/
-/out/
-/logs/
+.git/
 *.iml
+target/
+out/
