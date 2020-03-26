@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"no.skatteetaten.aurora","l":"AuroraMetrics"},{"p":"no.skatteetaten.aurora.config","l":"BaseStarterApplicationConfig"},{"p":"no.skatteetaten.aurora","l":"DatabasePropertiesListener"},{"p":"no.skatteetaten.aurora","l":"AuroraMetrics.StatusValue"}]
