@@ -1,7 +1,6 @@
 import com.adarshr.gradle.testlogger.theme.ThemeType.PLAIN
 import java.lang.System.getenv
 import org.gradle.api.JavaVersion.VERSION_11
-import org.gradle.api.JavaVersion.VERSION_1_8
 import org.gradle.api.tasks.wrapper.Wrapper.DistributionType.ALL
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jlleitschuh.gradle.ktlint.KtlintFormatTask
@@ -10,11 +9,6 @@ val buildTools = BuildUtils()
 val branchName = buildTools.gitBranch()
 group = "no.skatteetaten.aurora.springboot"
 version = buildTools.calculateVersion(properties["version"] as String, branchName)
-
-repositories {
-    mavenCentral()
-    jcenter()
-}
 
 buildscript {
     repositories {
@@ -26,9 +20,15 @@ buildscript {
     }
 }
 
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
 plugins {
     base
     checkstyle
+    maven
     `maven-publish`
     signing
 
@@ -120,7 +120,7 @@ tasks {
         dependsOn(listOf(ktlintKotlinScriptFormat, ktlintFormat))
 
         kotlinOptions {
-            jvmTarget = VERSION_1_8.toString()
+            jvmTarget = VERSION_11.toString()
         }
     }
 
@@ -152,51 +152,8 @@ publishing {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
 
-            pom {
-                name.set("Aurora Spring Boot Base Starter")
-                description.set(
-                    "This starter contains all the basic configuration needed to " +
-                    "run a spring-boot application on Aurora OpenShift"
-                )
-                url.set("https://github.com/Skatteetaten/aurora-spring-boot-base-starter")
-                licenses {
-                    license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-                    }
-                }
-                developers {
-                    developer {
-                        id.set("bjartek")
-                        name.set("Bjarte S. Karlsen")
-                        email.set("bjarte.karlsen@skatteetaten.no")
-                    }
-                    developer {
-                        id.set("mikand13")
-                        name.set("Anders Mikkelsen")
-                        email.set("anders.mikkelsen@skatteetaten.no")
-                    }
-                    developer {
-                        id.set("jarlehansen")
-                        name.set("Jarle Hansen")
-                        email.set("jarle.hansen@skatteetaten.no")
-                    }
-                }
-                scm {
-                    connection.set("scm:git:git://github.com/Skatteetaten/aurora-spring-boot-base-starter.git")
-                    developerConnection.set("scm:git:git@github.com/Skatteetaten/aurora-spring-boot-base-starter.git")
-                    url.set("https://github.com/Skatteetaten/aurora-spring-boot-base-starter")
-                }
-            }
-
-            versionMapping {
-                usage("java-api") {
-                    fromResolutionOf("runtimeClasspath")
-                }
-                usage("java-runtime") {
-                    fromResolutionResult()
-                }
-            }
+            pom(buildTools.pom())
+            versionMapping(buildTools.versionMapping())
         }
     }
 }
