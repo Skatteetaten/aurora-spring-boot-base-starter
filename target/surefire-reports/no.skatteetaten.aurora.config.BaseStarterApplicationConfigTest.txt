@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: no.skatteetaten.aurora.config.BaseStarterApplicationConfigTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.83 s - in no.skatteetaten.aurora.config.BaseStarterApplicationConfigTest

@@ -1,0 +1,5 @@
+no/skatteetaten/aurora/config/BaseStarterApplicationConfig.class
+no/skatteetaten/aurora/AuroraMetrics.class
+no/skatteetaten/aurora/DatabasePropertiesListener.class
+no/skatteetaten/aurora/config/BaseStarterApplicationConfig$YamlPropertyLoaderFactory.class
+no/skatteetaten/aurora/AuroraMetrics$StatusValue.class
