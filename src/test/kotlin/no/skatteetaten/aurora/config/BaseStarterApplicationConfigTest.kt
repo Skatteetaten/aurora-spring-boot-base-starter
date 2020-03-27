@@ -1,4 +1,4 @@
-package no.skatteetaten.aurora
+package no.skatteetaten.aurora.config
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
@@ -8,19 +8,17 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.test.context.SpringBootTest
 
-@SpringBootTest(classes = [SharedProperties::class])
-class SharedPropertiesTest {
-
+@SpringBootTest(classes = [BaseStarterApplicationConfig::class])
+class BaseStarterApplicationConfigTest {
     @Autowired
-    private lateinit var sharedProperties: SharedProperties
+    private lateinit var config: BaseStarterApplicationConfig
 
     @Value("\${spring.application.name}")
     private lateinit var applicationName: String
 
     @Test
-    fun `load properties`() {
-        assertThat(sharedProperties).isNotNull()
+    fun `Initialize base config and load properties`() {
+        assertThat(config).isNotNull()
         assertThat(applicationName).isEqualTo("my-app")
     }
-
 }
