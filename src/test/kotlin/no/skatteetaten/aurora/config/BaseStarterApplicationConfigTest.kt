@@ -13,12 +13,12 @@ class BaseStarterApplicationConfigTest {
     @Autowired
     private lateinit var config: BaseStarterApplicationConfig
 
-    @Value("\${spring.application.name}")
-    private lateinit var applicationName: String
+    @Value("\${management.server.port}")
+    private lateinit var managementPort: String
 
     @Test
     fun `Initialize base config and load properties`() {
         assertThat(config).isNotNull()
-        assertThat(applicationName).isEqualTo("my-app")
+        assertThat(managementPort).isEqualTo("8081")
     }
 }
