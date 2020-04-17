@@ -7,7 +7,7 @@ It has the following main dependencies:
 - Spring Sleuth (ready for Kafka -> Zipkin)
 - Micrometer / Prometheus
 
-== How to use
+## How to use
 Include the starter as a dependency
 
 ```xml
