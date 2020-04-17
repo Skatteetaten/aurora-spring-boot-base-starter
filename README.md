@@ -7,6 +7,17 @@ It has the following main dependencies:
 - Spring Sleuth (ready for Kafka -> Zipkin)
 - Micrometer / Prometheus
 
+== How to use
+Include the starter as a dependency
+
+```xml
+<dependency>
+  <groupId>no.skatteetaten.aurora.springboot</groupId>
+  <artifactId>aurora-spring-boot-base-starter</artifactId>
+  <version>${aurora.starters.version}</version>
+</dependency>
+```
+
 In order to deploy this application on the [AuroraPlatform](https://skatteetaten.github.io/aurora) using [AuroraConfig](https://skatteetaten.github.io/aurora/documentation/aurora-config/) the following must be specified in the base file:
 
 ```yaml
