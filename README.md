@@ -1,7 +1,7 @@
 # Aurora Spring Boot Base Starter
 
 The base starter provides the basic setup required for Spring Boot applications.
-It provides support for:
+It has the following main dependencies:
 - Spring Boot
 - Spring Actuator
 - Spring Sleuth (ready for Kafka -> Zipkin)
@@ -46,7 +46,7 @@ There are default min/max buckets set to 100ms to 5secounds for http and operati
 If you would like to change these use the following bean in your code
 
 ```java
- @Bean
+@Bean
 MeterFilter minExpectedHttp() {
     return MeterFilter.minExpected("http", Duration.ofMillis(200));
 }
