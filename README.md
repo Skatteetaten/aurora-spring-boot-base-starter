@@ -14,7 +14,7 @@ actuator:
   path: /management/prometheus
 ```
 
-=== Metrics
+## Metrics
 
 The starter will automatically add [Micrometer](http://micrometer.io) as the default
 metrics registry and also add `micrometer-registry-prometheus` for providing the `/prometheus` actuator endpoint that
@@ -53,7 +53,7 @@ MeterFilter minExpectedHttp() {
 ```
 
 
-=== Auto registration of DataSource
+## Auto registration of DataSource
 
 If a database is provided on OpenShift there will automatically be a DataSource created from the properties files provided
 by the platform. If you want to override to use a specific database you can set the `aurora.db` property if you have more
@@ -61,7 +61,7 @@ than one db in your application.
 
 Connection count metrics will also be collected from the DataSource.
 
-=== Configuration of the Actuator Endpoints
+## Configuration of the Actuator Endpoints
 
 Most actuator endpoints will be disabled by default;
 
