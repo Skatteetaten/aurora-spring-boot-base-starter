@@ -25,7 +25,9 @@ actuator:
   path: /management/prometheus
 ```
 
-## Metrics
+## Features
+
+### Metrics
 
 The starter will automatically add [Micrometer](http://micrometer.io) as the default
 metrics registry and also add `micrometer-registry-prometheus` for providing the `/prometheus` actuator endpoint that
@@ -64,7 +66,7 @@ MeterFilter minExpectedHttp() {
 ```
 
 
-## Auto registration of DataSource
+### Auto registration of DataSource
 
 If a database is provided on OpenShift there will automatically be a DataSource created from the properties files provided
 by the platform. If you want to override to use a specific database you can set the `aurora.db` property if you have more
@@ -72,7 +74,7 @@ than one db in your application.
 
 Connection count metrics will also be collected from the DataSource.
 
-## Configuration of the Actuator Endpoints
+### Configuration of the Actuator Endpoints
 
 Most actuator endpoints will be disabled by default;
 
@@ -92,7 +94,7 @@ value of this variable will be set by the Aurora platform when deploying. Securi
 metrics filter will be disabled.
 
 
-## The Aurora Management Interface
+### The Aurora Management Interface
 
 The starter will help you implement the requirements for the Aurora Management Interface by setting some common
 configuration values.
@@ -110,7 +112,7 @@ management.health.status.order=DOWN, OUT_OF_SERVICE, UNKNOWN, OBSERVE, UP
 management.port=${MANAGEMENT_HTTP_PORT:8081}
 ```
 
-## Setting of Spring Boot Properties
+### Setting of Spring Boot Properties
 
 The spring boot application name will be set from the environment variables APP_NAME and POD_NAMESPACE provided by the
 platform when deploying to Aurora OpenShift.
