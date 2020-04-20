@@ -43,8 +43,9 @@ Additionally a number of Micrometer metrics collectors will be automatically reg
 * UptimeMetrics
 * FileDescriptorMetrics
 * DataSourceMetrics
-* RestTemplateMetrics
-* TomcatMetrics
+* RestTemplateMetrics (only relevant for [MVC starter](https://github.com/Skatteetaten/aurora-spring-boot-mvc-starter))
+* WebClientMetrics (only relevant for [WebFlux starter](https://github.com/Skatteetaten/aurora-spring-boot-webflux-starter))
+* TomcatMetrics (only relevant for [MVC starter](https://github.com/Skatteetaten/aurora-spring-boot-mvc-starter))
 
 To get an overview of how Micrometer works we encourage you to read the Micrometer docs:
 https://micrometer.io/docs. Relevant sections are http://micrometer.io/docs/concepts, http://micrometer.io/docs/registry/prometheus and http://micrometer.io/docs/ref/spring/1.5
@@ -111,6 +112,10 @@ info.podLinks.metrics={metricsHostname}/dashboard/db/openshift-project-spring-ac
 management.health.status.order=DOWN, OUT_OF_SERVICE, UNKNOWN, OBSERVE, UP
 management.port=${MANAGEMENT_HTTP_PORT:8081}
 ```
+
+If you need to customize the response codes override the `management.endpoint.health.status.http-mapping.*` properties.
+Remember that if you alter any of these properties, you must add the default values for all statuses.
+This is because any changes here will alter the entire mapping of statuses to HTTP response codes.
 
 ### Setting of Spring Boot Properties
 
