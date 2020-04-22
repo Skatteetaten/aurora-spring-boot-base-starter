@@ -43,14 +43,12 @@ Additionally a number of Micrometer metrics collectors will be automatically reg
 * UptimeMetrics
 * FileDescriptorMetrics
 * DataSourceMetrics
-* RestTemplateMetrics (only relevant for [MVC starter](https://github.com/Skatteetaten/aurora-spring-boot-mvc-starter))
 * WebClientMetrics (only relevant for [WebFlux starter](https://github.com/Skatteetaten/aurora-spring-boot-webflux-starter))
-* TomcatMetrics (only relevant for [MVC starter](https://github.com/Skatteetaten/aurora-spring-boot-mvc-starter))
 
 To get an overview of how Micrometer works we encourage you to read the Micrometer docs:
 https://micrometer.io/docs. Relevant sections are http://micrometer.io/docs/concepts, http://micrometer.io/docs/registry/prometheus and http://micrometer.io/docs/ref/spring/1.5
 
-Outgoing and incomming HTTP metrics have by default percentiles turned on and has buckets between 100ms and 5s.
+Outgoing and incoming HTTP metrics have by default percentiles turned on and has buckets between 100ms and 5s.
 ```properties
 management.metrics.distribution.percentiles-histogram.http=true
 ```
