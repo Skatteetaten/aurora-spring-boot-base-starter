@@ -15,6 +15,7 @@ spring:
                     enabled: false
     sleuth:
         local-keys: User,User-Agent
+        propagation-keys: Korrelasjonsid
         log:
             slf4j:
                 whitelisted-mdc-keys: User,User-Agent
