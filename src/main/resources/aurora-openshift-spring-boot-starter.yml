@@ -19,6 +19,11 @@ spring:
         log:
             slf4j:
                 whitelisted-mdc-keys: User,User-Agent
+    lifecycle:
+        timeout-per-shutdown-phase: 10s
+server:
+    shutdown: graceful
+
 management:
     server:
         port: ${MANAGEMENT_HTTP_PORT:8081}
