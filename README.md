@@ -133,3 +133,6 @@ flyway.out-of-order=true
 info.auroraVersion= ${AURORA_VERSION:local-dev}
 info.imageBuildTime=${IMAGE_BUILD_TIME:}
 ```
+
+Zipkin is by default enabled when running with the `openshift` profile.
+This can be overridden by setting the `spring.zipkin.enabled=false/true`.
