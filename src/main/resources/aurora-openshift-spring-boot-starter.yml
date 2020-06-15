@@ -19,6 +19,8 @@ spring:
         log:
             slf4j:
                 whitelisted-mdc-keys: User,User-Agent
+    zipkin:
+        enabled: false
     lifecycle:
         timeout-per-shutdown-phase: 10s
 server:
