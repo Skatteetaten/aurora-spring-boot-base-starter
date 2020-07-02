@@ -14,11 +14,11 @@ spring:
                 composite-indicator:
                     enabled: false
     sleuth:
-        local-keys: User,User-Agent
+        local-keys: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid
         propagation-keys: Korrelasjonsid
         log:
             slf4j:
-                whitelisted-mdc-keys: User,User-Agent
+                whitelisted-mdc-keys: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid
     zipkin:
         enabled: false
     lifecycle:
