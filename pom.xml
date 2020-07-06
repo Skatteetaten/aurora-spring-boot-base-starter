@@ -61,7 +61,7 @@
 
     <springboot.version>2.3.1.RELEASE</springboot.version>
     <sleuth.version>2.2.3.RELEASE</sleuth.version>
-    <springkafka.version>2.5.1.RELEASE</springkafka.version>
+    <springkafka.version>2.5.3.RELEASE</springkafka.version>
     <micrometer.version>1.5.2</micrometer.version>
 
     <kotlin.version>1.3.72</kotlin.version>
@@ -73,11 +73,6 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-      <version>${springboot.version}</version>
-    </dependency>
-    <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-sleuth</artifactId>
       <version>${sleuth.version}</version>
@@ -86,6 +81,11 @@
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-zipkin</artifactId>
       <version>${sleuth.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+      <version>${springboot.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.kafka</groupId>
