@@ -21,7 +21,7 @@ class ZipkinPropertiesListenerTest {
 
         @Test
         fun `Default configuration`() {
-            assertThat(zipkinEnabled).isNotNull().isFalse()
+            assertThat(zipkinEnabled).isNotNull().isTrue()
         }
     }
 

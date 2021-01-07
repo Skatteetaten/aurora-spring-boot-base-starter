@@ -59,8 +59,8 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
 
-    <springboot.version>2.3.7.RELEASE</springboot.version>
-    <sleuth.version>2.2.6.RELEASE</sleuth.version>
+    <springboot.version>2.4.1</springboot.version>
+    <springcloud.release.train.version>2020.0.0</springcloud.release.train.version>
     <springkafka.version>2.6.4</springkafka.version>
     <micrometer.version>1.6.2</micrometer.version>
 
@@ -98,6 +98,14 @@
         <scope>import</scope>
       </dependency>
 
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${springcloud.release.train.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 
@@ -119,12 +127,10 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-sleuth</artifactId>
-      <version>${sleuth.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-zipkin</artifactId>
-      <version>${sleuth.version}</version>
+      <artifactId>spring-cloud-sleuth-zipkin</artifactId>
     </dependency>
 
     <dependency>
@@ -156,12 +162,26 @@
     </dependency>
   </dependencies>
 
+  <repositories>
+    <repository>
+      <id>org.springframework.maven.milestone</id>
+      <name>Spring Maven Milestone Repository</name>
+      <url>https://repo.spring.io/milestone</url>
+      <snapshots><enabled>false</enabled></snapshots>
+    </repository>
+    <repository>
+      <id>org.springframework.maven.plugins</id>
+      <name>Spring Maven Plugins Repository</name>
+      <url>https://repo.spring.io/plugins-release</url>
+      <snapshots><enabled>false</enabled></snapshots>
+    </repository>
+  </repositories>
+
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
     <testSourceDirectory>src/test/kotlin</testSourceDirectory>
 
     <plugins>
-
       <plugin>
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-maven-plugin</artifactId>
@@ -295,5 +315,4 @@
       </build>
     </profile>
   </profiles>
-
 </project>

@@ -14,13 +14,14 @@ spring:
                 composite-indicator:
                     enabled: false
     sleuth:
-        local-keys: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid
-        propagation-keys: Korrelasjonsid
-        log:
-            slf4j:
-                whitelisted-mdc-keys: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid
+        sampler:
+            probability: 0.0
+        baggage:
+            local-fields: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid
+            remote-fields: Korrelasjonsid
+            correlation-fields: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid
     zipkin:
-        enabled: false
+        enabled: true
     lifecycle:
         timeout-per-shutdown-phase: 10s
     codec:
