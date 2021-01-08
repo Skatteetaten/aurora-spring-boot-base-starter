@@ -14,14 +14,12 @@ spring:
                 composite-indicator:
                     enabled: false
     sleuth:
-        sampler:
-            probability: 0.0
         baggage:
             local-fields: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid
             remote-fields: Korrelasjonsid
             correlation-fields: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid
     zipkin:
-        enabled: true
+        enabled: false
     lifecycle:
         timeout-per-shutdown-phase: 10s
     codec:
