@@ -54,12 +54,6 @@ management:
         distribution:
             percentiles-histogram:
                 http: true
-            maximum-expected-value:
-                http: 2s
-                operations: 2s
-            minimum-expected-value:
-                http: 10ms
-                operations: 10ms
 info:
     serviceLinks:
         metrics: "{metricsHostname}/d/MssPVVpik/openshift-java-resource-usage?var-ds=openshift-{cluster}-ose&var-affiliation={affiliation}&var-project={namespace}&var-app={name}&var-instance=All"
