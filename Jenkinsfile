@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 def config = [
     scriptVersion  : 'v7',
-    iq: false,
+    iqOrganizationName: "Team AOS",
     credentialsId: 'github',
     deployTo: 'maven-central',
     openShiftBuild: false,
