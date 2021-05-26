@@ -67,7 +67,7 @@
     <kotlin.version>1.5.10</kotlin.version>
     <kotlin.code.style>official</kotlin.code.style>
     <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
-    <junit.version>5.7.0</junit.version>
+    <junit.version>5.7.1</junit.version>
     <assertk.version>0.24</assertk.version>
   </properties>
 
