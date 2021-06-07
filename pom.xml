@@ -127,6 +127,12 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-sleuth</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>io.zipkin.aws</groupId>
+          <artifactId>brave-propagation-aws</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
