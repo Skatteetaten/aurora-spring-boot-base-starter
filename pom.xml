@@ -61,6 +61,8 @@
 
     <springboot.version>2.5.0</springboot.version>
     <springcloud.release.train.version>2020.0.2</springcloud.release.train.version>
+    <!-- adding this as a direct dependency to be able to exclude brave transitive dependency, this causes an issue with enforcer plugin -->
+    <bravepropagationaws.version>0.21.3</bravepropagationaws.version>
     <springkafka.version>2.6.4</springkafka.version>
     <micrometer.version>1.6.2</micrometer.version>
 
@@ -127,10 +129,15 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-sleuth</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.zipkin.aws</groupId>
+      <artifactId>brave-propagation-aws</artifactId>
+      <version>${bravepropagationaws.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>io.zipkin.aws</groupId>
-          <artifactId>brave-propagation-aws</artifactId>
+          <groupId>io.zipkin.brave</groupId>
+          <artifactId>brave</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
