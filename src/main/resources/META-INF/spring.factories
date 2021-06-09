@@ -1,5 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   no.skatteetaten.aurora.config.BaseStarterApplicationConfig,\
   no.skatteetaten.aurora.AuroraMetrics
-org.springframework.context.ApplicationListener=no.skatteetaten.aurora.DatabasePropertiesListener,\
-  no.skatteetaten.aurora.ZipkinPropertiesListener
+org.springframework.context.ApplicationListener=no.skatteetaten.aurora.DatabasePropertiesListener

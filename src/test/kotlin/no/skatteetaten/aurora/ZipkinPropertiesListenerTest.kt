@@ -34,7 +34,7 @@ class ZipkinPropertiesListenerTest {
 
         @Test
         fun `Openshift profile`() {
-            assertThat(zipkinEnabled).isNotNull().isTrue()
+            assertThat(zipkinEnabled).isNotNull().isFalse()
         }
     }
 
