@@ -63,8 +63,7 @@
     <springcloud.release.train.version>2020.0.2</springcloud.release.train.version>
     <!-- adding this as a direct dependency to be able to exclude brave transitive dependency, this causes an issue with enforcer plugin -->
     <bravepropagationaws.version>0.21.3</bravepropagationaws.version>
-    <springkafka.version>2.6.4</springkafka.version>
-    <micrometer.version>1.6.2</micrometer.version>
+    <micrometer.version>1.7.0</micrometer.version>
 
     <kotlin.version>1.5.10</kotlin.version>
     <kotlin.code.style>official</kotlin.code.style>
