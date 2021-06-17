@@ -65,6 +65,18 @@
     <assertk.version>0.24</assertk.version>
   </properties>
 
+  <distributionManagement>
+    <repository>
+      <id>releases-nexus3</id>
+      <url>https://nexus.sits.no/repository/maven-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots-nexus3</id>
+      <name>Internal Snapshots</name>
+      <url>https://nexus.sits.no/repository/maven-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <dependencyManagement>
     <dependencies>
 
