@@ -2,7 +2,7 @@
 
 The base starter provides the basic setup required for Spring Boot applications.
 It has the following main dependencies:
-- Spring Boot
+- Spring Boot (2.5.1)
 - Spring Actuator
 - Spring Sleuth (ready for Kafka -> Zipkin)
 - Micrometer / Prometheus
