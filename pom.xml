@@ -23,13 +23,6 @@
     </license>
   </licenses>
 
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
-
   <scm>
     <url>https://github.com/Skatteetaten/aurora-spring-boot-base-starter</url>
     <connection>git@github.com:Skatteetaten/aurora-spring-boot-base-starter.git</connection>
@@ -59,8 +52,8 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
 
-    <springboot.version>2.5.0</springboot.version>
-    <springcloud.release.train.version>2020.0.2</springcloud.release.train.version>
+    <springboot.version>2.5.1</springboot.version>
+    <springcloud.release.train.version>2020.0.3</springcloud.release.train.version>
     <!-- adding this as a direct dependency to be able to exclude brave transitive dependency, this causes an issue with enforcer plugin -->
     <bravepropagationaws.version>0.21.3</bravepropagationaws.version>
     <micrometer.version>1.7.0</micrometer.version>
@@ -71,6 +64,18 @@
     <junit.version>5.7.1</junit.version>
     <assertk.version>0.24</assertk.version>
   </properties>
+
+  <distributionManagement>
+    <repository>
+      <id>releases-nexus3</id>
+      <url>https://nexus.sits.no/repository/maven-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots-nexus3</id>
+      <name>Internal Snapshots</name>
+      <url>https://nexus.sits.no/repository/maven-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <dependencyManagement>
     <dependencies>
@@ -214,17 +219,6 @@
         <version>2.22.2</version>
       </plugin>
       <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.8</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>ossrh</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
-        </configuration>
-      </plugin>
-      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.1.1</version>
@@ -275,27 +269,6 @@
   </build>
 
   <profiles>
-    <profile>
-      <id>sign</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.6</version>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
     <profile>
       <id>build-extras</id>
       <activation>
