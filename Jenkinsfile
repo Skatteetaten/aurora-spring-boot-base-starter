@@ -3,7 +3,6 @@ def config = [
     scriptVersion  : 'v7',
     iqOrganizationName: "Team AOS",
     credentialsId: 'github',
-    deployTo: 'maven-central',
     openShiftBuild: false,
     checkstyle : false,
     javaVersion : 11,

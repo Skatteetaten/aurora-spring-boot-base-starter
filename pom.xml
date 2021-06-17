@@ -23,13 +23,6 @@
     </license>
   </licenses>
 
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
-
   <scm>
     <url>https://github.com/Skatteetaten/aurora-spring-boot-base-starter</url>
     <connection>git@github.com:Skatteetaten/aurora-spring-boot-base-starter.git</connection>
@@ -59,8 +52,8 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
 
-    <springboot.version>2.5.0</springboot.version>
-    <springcloud.release.train.version>2020.0.2</springcloud.release.train.version>
+    <springboot.version>2.5.1</springboot.version>
+    <springcloud.release.train.version>2020.0.3</springcloud.release.train.version>
     <!-- adding this as a direct dependency to be able to exclude brave transitive dependency, this causes an issue with enforcer plugin -->
     <bravepropagationaws.version>0.21.3</bravepropagationaws.version>
     <micrometer.version>1.7.0</micrometer.version>
