@@ -6,6 +6,7 @@ fileLoader.withGit('https://git.aurora.skead.no/scm/ao/aurora-pipeline-scripts.g
 }
 
 def overrides = [
+    credentialsId: 'github',
     javaVersion: "11",
     docs: false,
     sonarQube: false,
