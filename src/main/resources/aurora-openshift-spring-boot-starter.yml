@@ -13,6 +13,8 @@ spring:
             client:
                 composite-indicator:
                     enabled: false
+        compatibility-verifier:
+            enabled: false
     sleuth:
         baggage:
             local-fields: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid
