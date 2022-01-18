@@ -20,6 +20,9 @@ spring:
             local-fields: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid
             remote-fields: Korrelasjonsid
             correlation-fields: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid
+    sampler:
+        probability: 1.0 # Used to get the correct MDC values set, should be adjusted when not relying on sleuth for header values on MDC?
+
     zipkin:
         enabled: false
     lifecycle:
