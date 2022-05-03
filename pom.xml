@@ -52,7 +52,7 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
 
-    <springboot.version>2.6.6</springboot.version>
+    <springboot.version>2.6.7</springboot.version>
     <springcloud.release.train.version>2021.0.1</springcloud.release.train.version>
     <!-- adding this as a direct dependency to be able to exclude brave transitive dependency, this causes an issue with enforcer plugin -->
     <bravepropagationaws.version>0.23.2</bravepropagationaws.version>
