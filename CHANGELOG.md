@@ -3,6 +3,11 @@ Alle viktige endringer i dette prosjektet vil bli dokumentert i denne filen.
 
 Formatet i denne filen er basert på Keep a Changelog og prosjektet følger Semantic Versioning.
 
+[1.3.10] - 2022-05-03
+Changed
+Oppgraderte til SpringBoot versjon 2.6.7.
+
+
 [1.3.8] - 2022-04-01
 Changed
 Oppgraderte til SpringBoot versjon 2.6.6.
