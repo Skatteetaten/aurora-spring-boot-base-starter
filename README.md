@@ -1,5 +1,8 @@
 # Aurora Spring Boot Base Starter
 
+This starter should not be used directly, use either [aurora-spring-boot-webflux-starter](https://github.com/Skatteetaten/aurora-spring-boot-webflux-starter) for reactive applications (WebClient) 
+or [aurora-spring-boot-mvc-starter](https://github.com/Skatteetaten/aurora-spring-boot-mvc-starter) for blocking servlet-based applications (RestTemplate).
+
 The base starter provides the basic setup required for Spring Boot applications.
 It has the following main dependencies:
 - Spring Boot (2.6.7)
