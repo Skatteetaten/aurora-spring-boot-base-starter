@@ -5,7 +5,7 @@ or [aurora-spring-boot-mvc-starter](https://github.com/Skatteetaten/aurora-sprin
 
 The base starter provides the basic setup required for Spring Boot applications.
 It has the following main dependencies:
-- Spring Boot (2.6.7)
+- Spring Boot (2.6.8)
 - Spring Actuator
 - Spring Sleuth (ready for Kafka -> Zipkin)
 - Micrometer / Prometheus
