@@ -36,7 +36,7 @@ The starter will automatically add [Micrometer](http://micrometer.io) as the def
 metrics registry and also add `micrometer-registry-prometheus` for providing the `/prometheus` actuator endpoint that
 will be (optionally) read by Prometheus automatically for all applications deployed on Aurora OpenShift.
 
-Additionally a number of Micrometer metrics collectors will be automatically registered;
+Additionally, a number of Micrometer metrics collectors will be automatically registered;
 
 * JvmThreadMetrics
 * ProcessorMetrics
