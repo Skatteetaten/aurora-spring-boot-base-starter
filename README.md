@@ -1,5 +1,6 @@
 # Aurora Spring Boot Base Starter
 
+
 This starter should not be used directly, use either [aurora-spring-boot-webflux-starter](https://github.com/Skatteetaten/aurora-spring-boot-webflux-starter) for reactive applications (WebClient) 
 or [aurora-spring-boot-mvc-starter](https://github.com/Skatteetaten/aurora-spring-boot-mvc-starter) for blocking servlet-based applications (RestTemplate).
 
