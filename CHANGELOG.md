@@ -3,6 +3,9 @@ Alle viktige endringer i dette prosjektet vil bli dokumentert i denne filen.
 
 Formatet i denne filen er basert på Keep a Changelog og prosjektet følger Semantic Versioning.
 
+[1.4.0] - 2022-07-06
+Oppgradert til SpringBoot versjon 2.7.1 og Spring Cloud til 2021.0.3
+
 [1.3.12] - 2022-05-19
 Changed
 Oppgraderte til SpringBoot versjon 2.6.8.

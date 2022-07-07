@@ -5,9 +5,9 @@ or [aurora-spring-boot-mvc-starter](https://github.com/Skatteetaten/aurora-sprin
 
 The base starter provides the basic setup required for Spring Boot applications.
 It has the following main dependencies:
-- Spring Boot (2.6.8)
+- Spring Boot (2.7.1)
 - Spring Actuator
-- Spring Sleuth (ready for Kafka -> Zipkin)
+- Spring Sleuth (tracing)
 - Micrometer / Prometheus
 
 ## How to use
@@ -36,7 +36,7 @@ The starter will automatically add [Micrometer](http://micrometer.io) as the def
 metrics registry and also add `micrometer-registry-prometheus` for providing the `/prometheus` actuator endpoint that
 will be (optionally) read by Prometheus automatically for all applications deployed on Aurora OpenShift.
 
-Additionally a number of Micrometer metrics collectors will be automatically registered;
+Additionally, a number of Micrometer metrics collectors will be automatically registered;
 
 * JvmThreadMetrics
 * ProcessorMetrics
