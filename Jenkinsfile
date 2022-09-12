@@ -14,7 +14,6 @@ def overrides = [
     manualReleaseEnabled: true,
     versionStrategy: [],
     iqOrganizationName: "Team AOS",
-    compilePropertiesIq: "-x test",
     chatRoom: "#aos-notifications"
 ]
 
