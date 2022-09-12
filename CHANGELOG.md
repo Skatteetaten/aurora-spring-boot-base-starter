@@ -3,6 +3,9 @@ Alle viktige endringer i dette prosjektet vil bli dokumentert i denne filen.
 
 Formatet i denne filen er basert på Keep a Changelog og prosjektet følger Semantic Versioning.
 
+[1.4.3] - 2022-09-12
+Oppgradert til snakeyaml 1.31 pga sikkerhetshull i 1.30
+
 [1.4.2] - 2022-09-09
 Oppgradert til Spring cloud release train 2021.0.4
 
