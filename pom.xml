@@ -38,6 +38,8 @@
     <springcloud.release.train.version>2021.0.4</springcloud.release.train.version>
     <!-- adding this as a direct dependency to be able to exclude brave transitive dependency, this causes an issue with enforcer plugin -->
     <bravepropagationaws.version>0.23.4</bravepropagationaws.version>
+    <!-- snakeyaml dependency added directly to avoid security problem in nexus iq -->
+    <snakeyaml.version>1.31</snakeyaml.version>
     <micrometer.version>1.9.3</micrometer.version>
 
     <kotlin.version>1.7.10</kotlin.version>
@@ -93,7 +95,12 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
+      <!-- should be removed when spring updates to a newer snakeyaml version, newer than 1.30 -->
+      <dependency>
+        <groupId>org.yaml</groupId>
+        <artifactId>snakeyaml</artifactId>
+        <version>${snakeyaml.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
