@@ -23,6 +23,10 @@ aurora {
 dependencies {
     implementationTransitiveNexusIQIssue("org.yaml:snakeyaml:1.33")
 
+    api(platform("org.springframework.cloud:spring-cloud-dependencies:2021.0.4"))
+    implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
+    implementation("org.springframework.cloud:spring-cloud-sleuth-zipkin")
+
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("io.micrometer:micrometer-registry-prometheus")
 
