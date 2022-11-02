@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="no.skatteetaten.aurora.DatabasePropertiesListenerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-02T11:31:43" hostname="SKE-DM3HQ-MD6T" time="0.034">
+  <properties/>
+  <testcase name="Set database properties()" classname="no.skatteetaten.aurora.DatabasePropertiesListenerTest" time="0.034"/>
+  <system-out><![CDATA[2022-11-02 12:31:43.020  INFO 47008 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [no.skatteetaten.aurora.DatabasePropertiesListenerTest], using SpringBootContextLoader
+2022-11-02 12:31:43.021  INFO 47008 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [no.skatteetaten.aurora.DatabasePropertiesListenerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-11-02 12:31:43.026  INFO 47008 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-11-02 12:31:43.027  INFO 47008 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3f5353ab, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@66910ced, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@637a43b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@453d15d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@60d6d8d0, org.springframework.test.context.event.EventPublishingTestExecutionListener@e4e4643, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@35632dcd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@185d151b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4e9b4e98, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@329b6556, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1eba2b8d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6e3f108c]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.3)
+
+2022-11-02 12:31:43.053  INFO 47008 --- [    Test worker] n.s.a.DatabasePropertiesListenerTest     : Starting DatabasePropertiesListenerTest using Java 11.0.11 on SKE-DM3HQ-MD6T with PID 47008 (started by k82814 in /Users/k82814/workspace/kotlin/aurora-spring-boot-base-starter)
+2022-11-02 12:31:43.054  INFO 47008 --- [    Test worker] n.s.a.DatabasePropertiesListenerTest     : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 12:31:43.066  INFO 47008 --- [    Test worker] n.s.a.DatabasePropertiesListenerTest     : Started DatabasePropertiesListenerTest in 0.036 seconds (JVM running for 3.6)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

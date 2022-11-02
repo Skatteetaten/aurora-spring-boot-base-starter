@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="no.skatteetaten.aurora.ZipkinPropertiesListenerTest$Default" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-02T11:31:43" hostname="SKE-DM3HQ-MD6T" time="0.003">
+  <properties/>
+  <testcase name="Default configuration()" classname="no.skatteetaten.aurora.ZipkinPropertiesListenerTest$Default" time="0.003"/>
+  <system-out><![CDATA[2022-11-02 12:31:43.111  INFO 47008 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [no.skatteetaten.aurora.ZipkinPropertiesListenerTest$Default], using SpringBootContextLoader
+2022-11-02 12:31:43.112  INFO 47008 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [no.skatteetaten.aurora.ZipkinPropertiesListenerTest$Default]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-11-02 12:31:43.117  INFO 47008 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-11-02 12:31:43.119  INFO 47008 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@73eb026f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@61adaa04, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@162ba19b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@24fa2e1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@299c20bd, org.springframework.test.context.event.EventPublishingTestExecutionListener@256d5200, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6e81084f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@11a6e7d4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@59f7a495, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@164500f9, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7060b10e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@565e7091]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.3)
+
+2022-11-02 12:31:43.142  INFO 47008 --- [    Test worker] s.a.ZipkinPropertiesListenerTest$Default : Starting ZipkinPropertiesListenerTest.Default using Java 11.0.11 on SKE-DM3HQ-MD6T with PID 47008 (started by k82814 in /Users/k82814/workspace/kotlin/aurora-spring-boot-base-starter)
+2022-11-02 12:31:43.143  INFO 47008 --- [    Test worker] s.a.ZipkinPropertiesListenerTest$Default : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 12:31:43.170  INFO 47008 --- [    Test worker] s.a.ZipkinPropertiesListenerTest$Default : Started ZipkinPropertiesListenerTest.Default in 0.05 seconds (JVM running for 3.705)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

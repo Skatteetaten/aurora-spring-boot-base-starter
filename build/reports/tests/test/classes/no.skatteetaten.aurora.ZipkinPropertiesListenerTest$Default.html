@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Default</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Default</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/no.skatteetaten.aurora.html">no.skatteetaten.aurora</a> &gt; ZipkinPropertiesListenerTest$Default</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.003s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Default configuration()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2022-11-02 12:31:43.111  INFO 47008 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [no.skatteetaten.aurora.ZipkinPropertiesListenerTest$Default], using SpringBootContextLoader
+2022-11-02 12:31:43.112  INFO 47008 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [no.skatteetaten.aurora.ZipkinPropertiesListenerTest$Default]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-11-02 12:31:43.117  INFO 47008 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-11-02 12:31:43.119  INFO 47008 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@73eb026f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@61adaa04, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@162ba19b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@24fa2e1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@299c20bd, org.springframework.test.context.event.EventPublishingTestExecutionListener@256d5200, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6e81084f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@11a6e7d4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@59f7a495, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@164500f9, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7060b10e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@565e7091]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.3)
+
+2022-11-02 12:31:43.142  INFO 47008 --- [    Test worker] s.a.ZipkinPropertiesListenerTest$Default : Starting ZipkinPropertiesListenerTest.Default using Java 11.0.11 on SKE-DM3HQ-MD6T with PID 47008 (started by k82814 in /Users/k82814/workspace/kotlin/aurora-spring-boot-base-starter)
+2022-11-02 12:31:43.143  INFO 47008 --- [    Test worker] s.a.ZipkinPropertiesListenerTest$Default : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2022-11-02 12:31:43.170  INFO 47008 --- [    Test worker] s.a.ZipkinPropertiesListenerTest$Default : Started ZipkinPropertiesListenerTest.Default in 0.05 seconds (JVM running for 3.705)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Nov 2, 2022, 12:31:43 PM</p>
+</div>
+</div>
+</body>
+</html>

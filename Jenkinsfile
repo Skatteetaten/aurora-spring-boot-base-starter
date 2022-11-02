@@ -1,11 +1,7 @@
 #!/usr/bin/env groovy
 
-def version = 'v7'
-fileLoader.withGit('https://git.aurora.skead.no/scm/ao/aurora-pipeline-scripts.git', version) {
-    jenkinsfile = fileLoader.load('templates/leveransepakke')
-}
-
-def overrides = [
+def config = [
+    scriptVersion  : 'v7',
     credentialsId: 'github',
     javaVersion: "11",
     docs: false,
@@ -17,4 +13,8 @@ def overrides = [
     chatRoom: "#aos-notifications"
 ]
 
-jenkinsfile.run(version, overrides)
+fileLoader.withGit('https://git.aurora.skead.no/scm/ao/aurora-pipeline-scripts.git', version) {
+    jenkinsfile = fileLoader.load('templates/leveransepakke')
+}
+
+jenkinsfile.gradle(config.scriptVersion, config)
