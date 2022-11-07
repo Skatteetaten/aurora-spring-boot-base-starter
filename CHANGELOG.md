@@ -3,6 +3,9 @@ Alle viktige endringer i dette prosjektet vil bli dokumentert i denne filen.
 
 Formatet i denne filen er basert på Keep a Changelog og prosjektet følger Semantic Versioning.
 
+[1.4.4] - 2022-11-03
+Oppgradert til spring boot 2.7.5 + snakeyaml 1.33
+
 [1.4.3] - 2022-09-12
 Oppgradert til snakeyaml 1.31 pga sikkerhetshull i 1.30
 
