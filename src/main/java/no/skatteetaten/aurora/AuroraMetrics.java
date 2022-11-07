@@ -1,6 +1,7 @@
 package no.skatteetaten.aurora;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
@@ -21,7 +22,7 @@ public class AuroraMetrics {
     }
 
     public <T> T withMetrics(String name, Supplier<T> s) {
-        return withMetricsInternal("operations", List.of(Tag.of("name", name)), s);
+        return withMetricsInternal("operations", Collections.singletonList(Tag.of("name", name)), s);
     }
 
     public <T> T withMetrics(String name, List<Tag> inputTags, Supplier<T> s) {
@@ -53,7 +54,7 @@ public class AuroraMetrics {
     }
 
     public void status(String name, StatusValue value) {
-        statusInternal("", value, List.of(Tag.of("name", name)));
+        statusInternal("", value, Collections.singletonList(Tag.of("name", name)));
     }
 
     public void status(String name, StatusValue value, List<Tag> inputTags) {

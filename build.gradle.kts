@@ -1,10 +1,8 @@
-import no.skatteetaten.aurora.gradle.plugins.extensions.implementationTransitiveNexusIQIssue
-
 plugins {
     `java-library`
-    kotlin("jvm") version "1.7.10"
-    id("no.skatteetaten.gradle.aurora") version "4.5.8"
-    id("io.spring.dependency-management") version "1.0.15.RELEASE"
+    kotlin("jvm") version "1.7.20"
+    id("no.skatteetaten.gradle.aurora") version "4.5.10"
+    id("io.spring.dependency-management") version "1.1.0"
 }
 
 aurora {
@@ -22,9 +20,7 @@ aurora {
 }
 
 dependencies {
-    implementationTransitiveNexusIQIssue("org.yaml:snakeyaml:1.33")
-
-    implementation(platform("org.springframework.cloud:spring-cloud-dependencies:2021.0.4"))
+    implementation(platform("org.springframework.cloud:spring-cloud-dependencies:2021.0.5"))
 
     implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
     implementation("org.springframework.cloud:spring-cloud-sleuth-brave")
