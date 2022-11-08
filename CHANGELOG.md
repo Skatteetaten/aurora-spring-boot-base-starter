@@ -3,6 +3,10 @@ Alle viktige endringer i dette prosjektet vil bli dokumentert i denne filen.
 
 Formatet i denne filen er basert på Keep a Changelog og prosjektet følger Semantic Versioning.
 
+[1.5.0] - 2022-11-08
+Endret til gradle, forenklet dependency oppsettet.
+Starteren bygges nå for java 8.
+
 [1.4.4] - 2022-11-03
 Oppgradert til spring boot 2.7.5 + snakeyaml 1.33
 
