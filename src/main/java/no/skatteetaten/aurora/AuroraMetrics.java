@@ -1,7 +1,7 @@
 package no.skatteetaten.aurora;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
@@ -15,14 +15,14 @@ import io.micrometer.core.instrument.Timer;
 @Component
 public class AuroraMetrics {
 
-    private MeterRegistry registry;
+    private final MeterRegistry registry;
 
     public AuroraMetrics(MeterRegistry registry) {
         this.registry = registry;
     }
 
     public <T> T withMetrics(String name, Supplier<T> s) {
-        return withMetricsInternal("operations", Arrays.asList(Tag.of("name", name)), s);
+        return withMetricsInternal("operations", Collections.singletonList(Tag.of("name", name)), s);
     }
 
     public <T> T withMetrics(String name, List<Tag> inputTags, Supplier<T> s) {
@@ -54,7 +54,7 @@ public class AuroraMetrics {
     }
 
     public void status(String name, StatusValue value) {
-        statusInternal("", value, Arrays.asList(Tag.of("name", name)));
+        statusInternal("", value, Collections.singletonList(Tag.of("name", name)));
     }
 
     public void status(String name, StatusValue value, List<Tag> inputTags) {
@@ -63,8 +63,7 @@ public class AuroraMetrics {
 
     private void statusInternal(String name, StatusValue value, List<Tag> inputTags) {
 
-        List<Tag> tags = new ArrayList<>();
-        tags.addAll(inputTags);
+        List<Tag> tags = new ArrayList<>(inputTags);
 
         registry.gauge("last_status" + name, tags, value.getValue());
         tags.add(Tag.of("status", value.name()));
@@ -78,7 +77,7 @@ public class AuroraMetrics {
         CRITICAL(2),
         UNKNOWN(3);
 
-        private int value;
+        private final int value;
 
         StatusValue(int value) {
             this.value = value;
