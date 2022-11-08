@@ -19,7 +19,9 @@ aurora {
 }
 
 dependencies {
-    api("org.springframework.boot:spring-boot-starter-actuator")
+    api("org.springframework.boot:spring-boot-starter-actuator") {
+        isTransitive = true
+    }
     api("io.micrometer:micrometer-registry-prometheus")
 
     testImplementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
