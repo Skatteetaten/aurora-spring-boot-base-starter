@@ -16,15 +16,18 @@ spring:
         compatibility-verifier:
             enabled: false
     sleuth:
+        otel:
+            exporter:
+                otlp:
+                    enabled: false
+            config:
+                trace-id-ratio-based: 1.0
         baggage:
             local-fields: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid # List of fields that should be accessible within the JVM process but not propagated over the wire.
             remote-fields: Korrelasjonsid # List of fields that are referenced the same in-process as it is on the wire. For example, the field "x-vcap-request-id" would be set as-is including the prefix.
             correlation-fields: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid # List of fields that should be propagated over the wire.
         sampler:
             probability: 1.0 # Used to get the correct MDC values set, should be adjusted when not relying on sleuth for header values on MDC?
-
-    zipkin:
-        enabled: false
     lifecycle:
         timeout-per-shutdown-phase: 10s
     codec:
