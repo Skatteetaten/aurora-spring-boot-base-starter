@@ -21,7 +21,7 @@ spring:
                 otlp:
                     enabled: false
             config:
-                trace-id-ratio-based: 1.0
+                trace-id-ratio-based: 1.0 # the tracing data sampling probability. If the ratio is less than 1.0, some traces will not be exported.
         baggage:
             local-fields: User,User-Agent,Korrelasjonsid,Klientid,Meldingsid # List of fields that should be accessible within the JVM process but not propagated over the wire.
             remote-fields: Korrelasjonsid # List of fields that are referenced the same in-process as it is on the wire. For example, the field "x-vcap-request-id" would be set as-is including the prefix.
