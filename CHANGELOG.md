@@ -3,7 +3,7 @@ Alle viktige endringer i dette prosjektet vil bli dokumentert i denne filen.
 
 Formatet i denne filen er basert på Keep a Changelog og prosjektet følger Semantic Versioning.
 
-[1.6.0] - 2022-11-25
+[2.0.0] - 2022-11-25
 Endret fra zipkin til opentelemetry.
 
 [1.5.0] - 2022-11-08
