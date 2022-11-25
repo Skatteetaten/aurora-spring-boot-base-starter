@@ -1,7 +1,7 @@
 plugins {
     `java-library`
-    kotlin("jvm") version "1.7.20"
-    id("no.skatteetaten.gradle.aurora") version "4.5.10"
+    kotlin("jvm") version "1.7.21"
+    id("no.skatteetaten.gradle.aurora") version "4.5.11"
 }
 
 aurora {
