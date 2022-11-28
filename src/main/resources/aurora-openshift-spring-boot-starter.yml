@@ -16,6 +16,7 @@ spring:
         compatibility-verifier:
             enabled: false
     sleuth:
+        enabled: true
         otel:
             exporter:
                 otlp:
